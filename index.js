@@ -146,17 +146,17 @@ const questions = [
 // Function to write README file
 const writeToFile = data => {
     return new Promise((resolve, reject) => {
-        // make a readme file and add to assets folder
-        fs.writeFile('./assets/README.md', data, err => {
-            // if there's an error, reject the Promise and send the error to .catch() method
+        // function to make a readme file 
+        fs.writeFile('README.md', data, err => {
+            // if an error occurs, reject the Promise and refer the error to .catch() method
             if (err) {
                 reject (err);
                 return;
             }
-            // if everything went well, resolve the Promise and send the successful data to the .then() method
+            // resolve the Promise and refer the data to the .then() method
             resolve({
                 ok: true,
-                message: console.log('Success! Navigate to the "assests" folder to see your README!')
+                message: console.log('Success! Navigate to the file README.md to see your creation!')
             });
         })
     })

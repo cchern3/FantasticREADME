@@ -35,6 +35,7 @@ function renderLicenseSection(license) {
 }
 
 // Generate markdown for README
+// Table of Contents along with the indicated input data from the user's answered prompts
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.licenses)}
